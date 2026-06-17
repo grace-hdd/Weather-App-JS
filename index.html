@@ -34,5 +34,20 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+
+		const apiKey = "5d715e6e46850f4ee7b6c488abdfce2e";
+		const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=beirut";
+
+		async function checkWeather(){
+			const response = await fetch(apiUrl + `&appid=${apiKey}`);
+			var data = await response.json();
+
+			console.log(data);
+		}
+
+		checkWeather();
+	</script>
 </body>
 </html>
