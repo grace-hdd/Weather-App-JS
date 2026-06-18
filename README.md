@@ -13,15 +13,15 @@ Simple client-side weather app that uses the OpenWeatherMap API to show temperat
 
 ## Provide the key to this project (do NOT commit keys)
 Option 1 — Quick (local testing)
-- Open `index.html`, find:
-  const apiKey = "Enter-Your-Key-Here";
+- Open `index.html`, find: </br>
+  const apiKey = "Enter-Your-Key-Here";</br>
   and replace the placeholder with your key locally. Do not commit this change.
 
 Option 2 — Safer (recommended)
 - Create a local file `key.js` (ignored by git) with your key and expose it on `window`.
-- Add `key.js` to `.gitignore`:
+- Add `key.js` to `.gitignore`: </br>
   echo "key.js" >> .gitignore
-- Include `key.js` in `index.html` before the inline script:
+- Include `key.js` in `index.html` before the inline script:</br>
   <script src="key.js"></script>
 
 Example `key.js` is provided below.
@@ -32,7 +32,7 @@ Example `key.js` is provided below.
 
 ## Security
 - Never commit API keys or other secrets.
-- If a key is accidentally committed, remove it from the index and rotate the key:
-  git rm --cached path/to/file
-  git commit -m "Remove secret"
-  Then generate a new API key on OpenWeatherMap.
+- If a key is accidentally committed, remove it from the index and rotate the key:</br>
+  git rm --cached path/to/file</br>
+  git commit -m "Remove secret"</br>
+  Then generate a new API key on OpenWeatherMap.</br>
