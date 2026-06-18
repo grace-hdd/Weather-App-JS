@@ -115,7 +115,7 @@ Example:
 
 If you deploy the app (e.g., GitHub Pages), add your link here:
 
-`https://your-demo-url-here`
+<url src="https://grace-hdd.github.io/Weather-App-JS/">
 
 ---
 
