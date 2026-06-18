@@ -1,51 +1,60 @@
 # Weather-App-JS
 
-A simple, client-side weather app built with **HTML, CSS, and JavaScript**.
+A simple weather application built with **HTML, CSS, and JavaScript** that fetches live weather data from the **OpenWeatherMap API**.
 
-It lets you search for any city and displays current weather data from the **OpenWeatherMap API**, including:
-- Temperature
-- Humidity
-- Wind speed
-- Weather condition/description
+Users can search for a city and view key weather information in real time.
 
 ---
 
-## How it works
+## Features
 
-1. Enter a city name.
-2. The app sends a request to OpenWeatherMap.
-3. The API response is rendered in the UI.
-
-Because this project runs entirely in the browser, it is easy to test locally.
-
----
-
-## Get an API key from OpenWeatherMap
-
-To use this app, you need a free API key.
-
-1. Go to: https://openweathermap.org/ and create an account.
-2. After signing in, open your account dashboard: https://home.openweathermap.org/api_keys
-3. Create a new key (or use the default key).
-4. Wait a few minutes for key activation if requests fail at first.
+- Search weather by city name
+- Displays:
+  - Temperature
+  - Humidity
+  - Wind speed
+  - Weather description/condition
+- Fast, client-side UI (no backend required)
 
 ---
 
-## Configure your API key
+## Tech Stack
 
-### Option 1: Quick local test
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- OpenWeatherMap Current Weather API
 
-Open `index.html` and replace:
+---
+
+## Getting an API key (OpenWeatherMap)
+
+This project requires a free API key from OpenWeatherMap.
+
+1. Create an account at: https://openweathermap.org/
+2. Sign in and open your API keys page: https://home.openweathermap.org/api_keys
+3. Create a key (or use the default one)
+4. Wait a few minutes for activation if your first request fails
+
+---
+
+## Project Setup
+
+### Option 1 — Quick local setup
+
+Edit `index.html` and replace:
 
 ```js
 const apiKey = "Enter-Your-Key-Here";
 ```
 
-with your real key.
+with your actual API key.
 
-> Do not commit this key to GitHub.
+> ⚠️ Do not commit your real API key.
 
-### Option 2: Recommended (keep key out of tracked files)
+### Option 2 — Recommended (safer)
+
+Keep your key in a local, ignored file.
 
 1. Create `key.js` in the project root:
 
@@ -59,27 +68,69 @@ window.OPENWEATHER_API_KEY = "your_api_key_here";
 echo "key.js" >> .gitignore
 ```
 
-3. Load `key.js` before your app script in `index.html`:
+3. Include `key.js` before your main script in `index.html`:
 
 ```html
 <script src="key.js"></script>
 ```
 
-4. In your app code, read the key from `window.OPENWEATHER_API_KEY`.
+4. Read the key from `window.OPENWEATHER_API_KEY` in your JavaScript.
 
 ---
 
-## Run the project
+## Run Locally
 
-- Open `index.html` directly in your browser, **or**
-- Serve the folder with a local static server and open it in the browser.
+You can run the app by:
 
-Then search for a city to see live weather results.
+- Opening `index.html` directly in your browser, or
+- Serving the folder with a local static server
+
+Then enter a city and click search to fetch weather data.
 
 ---
 
-## Security notes
+## Error Handling
+
+Common issues and fixes:
+
+- **Invalid city name** → Check spelling and try again.
+- **401 Unauthorized** → Your API key is missing/invalid.
+- **429 Too Many Requests** → You have hit your API rate limit.
+- **No data returned** → Wait a few minutes after creating a new API key.
+- **Network errors** → Check your internet connection or browser console.
+
+---
+
+## Screenshot
+
+Add an app screenshot to improve the README preview.
+
+Example:
+
+```md
+![Weather App Screenshot](./assets/screenshot.png)
+```
+
+---
+
+## Live Demo (Optional)
+
+If you deploy the app (e.g., GitHub Pages), add your link here:
+
+`https://your-demo-url-here`
+
+---
+
+## Security Notes
 
 - Never commit API keys or secrets.
-- If a key is exposed, rotate it immediately in OpenWeatherMap.
-- Remove accidentally tracked secret files and commit the removal.
+- If a key is exposed, rotate/regenerate it immediately.
+- Remove accidentally committed secret files from Git history when necessary.
+
+---
+
+## License
+
+This project is open source under the **MIT License**.
+
+(You can add a `LICENSE` file to formalize this.)
