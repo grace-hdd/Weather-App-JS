@@ -107,7 +107,7 @@ Add an app screenshot to improve the README preview.
 
 Example:
 
-<img src="assets/screeshot.png">
+<img src="assets/screenshot.png">
 
 ---
 
