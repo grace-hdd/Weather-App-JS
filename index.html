@@ -40,8 +40,7 @@
 
 	<script src="key.js"></script>
 	<script>
-
-		const apiKey = "Enter you key here";
+		const apiKey = window.__OWM_API_KEY || "Enter your key here";
 		const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 		const searchBox = document.querySelector(".search input");
 		const searchBtn = document.querySelector(".search button");
