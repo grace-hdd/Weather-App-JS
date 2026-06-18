@@ -1,38 +1,136 @@
 # Weather-App-JS
 
-Simple client-side weather app that uses the OpenWeatherMap API to show temperature, humidity and wind for a city.
+A simple weather application built with **HTML, CSS, and JavaScript** that fetches live weather data from the **OpenWeatherMap API**.
 
-## Prerequisites
-- Modern browser
-- OpenWeatherMap API key (free tier available)
+Users can search for a city and view key weather information in real time.
 
-## Get an OpenWeatherMap API key
-1. Sign up at https://home.openweathermap.org/users/sign_up.
-2. Sign in and open Dashboard → API keys.
-3. Create or copy the default key (may take a few minutes to activate).
+---
 
-## Provide the key to this project (do NOT commit keys)
-Option 1 — Quick (local testing)
-- Open `index.html`, find:
-  const apiKey = "Enter-Your-Key-Here";
-  and replace the placeholder with your key locally. Do not commit this change.
+## Features
 
-Option 2 — Safer (recommended)
-- Create a local file `key.js` (ignored by git) with your key and expose it on `window`.
-- Add `key.js` to `.gitignore`:
-  echo "key.js" >> .gitignore
-- Include `key.js` in `index.html` before the inline script:
-  <script src="key.js"></script>
+- Search weather by city name
+- Displays:
+  - Temperature
+  - Humidity
+  - Wind speed
+  - Weather description/condition
+- Fast, client-side UI (no backend required)
 
-Example `key.js` is provided below.
+---
 
-## Usage
-1. Open `index.html` in a browser (or serve via local static server).
-2. Type a city name and click search.
+## Tech Stack
 
-## Security
-- Never commit API keys or other secrets.
-- If a key is accidentally committed, remove it from the index and rotate the key:
-  git rm --cached path/to/file
-  git commit -m "Remove secret"
-  Then generate a new API key on OpenWeatherMap.
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- OpenWeatherMap Current Weather API
+
+---
+
+## Getting an API key (OpenWeatherMap)
+
+This project requires a free API key from OpenWeatherMap.
+
+1. Create an account at: https://openweathermap.org/
+2. Sign in and open your API keys page: https://home.openweathermap.org/api_keys
+3. Create a key (or use the default one)
+4. Wait a few minutes for activation if your first request fails
+
+---
+
+## Project Setup
+
+### Option 1 — Quick local setup
+
+Edit `index.html` and replace:
+
+```js
+const apiKey = "Enter-Your-Key-Here";
+```
+
+with your actual API key.
+
+> ⚠️ Do not commit your real API key.
+
+### Option 2 — Recommended (safer)
+
+Keep your key in a local, ignored file.
+
+1. Create `key.js` in the project root:
+
+```js
+window.OPENWEATHER_API_KEY = "your_api_key_here";
+```
+
+2. Add `key.js` to `.gitignore`:
+
+```bash
+echo "key.js" >> .gitignore
+```
+
+3. Include `key.js` before your main script in `index.html`:
+
+```html
+<script src="key.js"></script>
+```
+
+4. Read the key from `window.OPENWEATHER_API_KEY` in your JavaScript.
+
+---
+
+## Run Locally
+
+You can run the app by:
+
+- Opening `index.html` directly in your browser, or
+- Serving the folder with a local static server
+
+Then enter a city and click search to fetch weather data.
+
+---
+
+## Error Handling
+
+Common issues and fixes:
+
+- **Invalid city name** → Check spelling and try again.
+- **401 Unauthorized** → Your API key is missing/invalid.
+- **429 Too Many Requests** → You have hit your API rate limit.
+- **No data returned** → Wait a few minutes after creating a new API key.
+- **Network errors** → Check your internet connection or browser console.
+
+---
+
+## Screenshot
+
+Add an app screenshot to improve the README preview.
+
+Example:
+
+```md
+![Weather App Screenshot](./assets/screenshot.png)
+```
+
+---
+
+## Live Demo (Optional)
+
+If you deploy the app (e.g., GitHub Pages), add your link here:
+
+`https://your-demo-url-here`
+
+---
+
+## Security Notes
+
+- Never commit API keys or secrets.
+- If a key is exposed, rotate/regenerate it immediately.
+- Remove accidentally committed secret files from Git history when necessary.
+
+---
+
+## License
+
+This project is open source under the **MIT License**.
+
+(You can add a `LICENSE` file to formalize this.)
