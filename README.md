@@ -107,9 +107,7 @@ Add an app screenshot to improve the README preview.
 
 Example:
 
-```md
-![Weather App Screenshot](./assets/screenshot.png)
-```
+<img src="assets/screeshot.png">
 
 ---
 
