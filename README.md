@@ -42,13 +42,11 @@ This project requires a free API key from OpenWeatherMap.
 
 ### Option 1 — Quick local setup
 
-Edit `index.html` and replace:
+Create a local file named `key.js` in the project root with:
 
 ```js
-const apiKey = "Enter-Your-Key-Here";
+window.__OWM_API_KEY = "your_api_key_here";
 ```
-
-with your actual API key.
 
 > ⚠️ Do not commit your real API key.
 
@@ -59,7 +57,7 @@ Keep your key in a local, ignored file.
 1. Create `key.js` in the project root:
 
 ```js
-window.OPENWEATHER_API_KEY = "your_api_key_here";
+window.__OWM_API_KEY = "your_api_key_here";
 ```
 
 2. Add `key.js` to `.gitignore`:
@@ -68,13 +66,14 @@ window.OPENWEATHER_API_KEY = "your_api_key_here";
 echo "key.js" >> .gitignore
 ```
 
-3. Include `key.js` before your main script in `index.html`:
+3. Ensure `index.html` includes `key.js` before the app script:
 
 ```html
 <script src="key.js"></script>
+<script>
+  // app code that reads window.__OWM_API_KEY
+</script>
 ```
-
-4. Read the key from `window.OPENWEATHER_API_KEY` in your JavaScript.
 
 ---
 
