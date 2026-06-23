@@ -112,7 +112,7 @@ Example:
 
 ## Live Demo
 
-https://grace-hdd.github.io/Weather-App-JS/
+<a href="https://grace-hdd.github.io/Weather-App-JS/" target="_blank" rel="noopener noreferrer">Live Demo</a>
 
 ---
 
