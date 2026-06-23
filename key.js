@@ -3,4 +3,4 @@
 // window.__OWM_API_KEY = "your_api_key_here";
 // Do NOT commit your real API key. The repository should never contain secrets.
 
-window.__OWM_API_KEY = window.__OWM_API_KEY || "136e3fe43d1f0393886188f14d5bbc36";
+window.__OWM_API_KEY = "136e3fe43d1f0393886188f14d5bbc36";
