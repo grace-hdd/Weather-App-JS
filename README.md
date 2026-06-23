@@ -110,9 +110,7 @@ Example:
 
 ---
 
-## Live Demo (Optional)
-
-If you deploy the app (e.g., GitHub Pages), add your link here:
+## Live Demo
 
 https://grace-hdd.github.io/Weather-App-JS/
 
