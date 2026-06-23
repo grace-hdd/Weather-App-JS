@@ -127,5 +127,3 @@ Example:
 ## License
 
 This project is open source under the **MIT License**.
-
-(You can add a `LICENSE` file to formalize this.)
